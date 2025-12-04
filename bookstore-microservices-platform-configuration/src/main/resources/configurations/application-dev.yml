@@ -1,0 +1,23 @@
+database: mysql
+
+spring:
+  datasource:
+    url: jdbc:mariadb://192.168.1.88:3306/bookstore
+    username: allen
+    password: Sz@19811211
+    driver-class-name: org.mariadb.jdbc.Driver
+    initialization-mode: always
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  sql:
+    init:
+      mode: always
+logging:
+  level:
+    org:
+      springframework:
+        jdbc:
+          datasource:
+            init: DEBUG
