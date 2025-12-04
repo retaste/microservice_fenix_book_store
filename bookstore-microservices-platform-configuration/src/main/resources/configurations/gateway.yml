@@ -9,7 +9,7 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 20000
+            timeoutInMilliseconds: 80000
 
 ribbon:
   ReadTimeout: 20000
@@ -24,7 +24,7 @@ zuul:
   routes:
     account:
       path: /restful/accounts/**
-      serviceId: account
+      serviceId: useraccount
       stripPrefix: false
       sensitiveHeaders: "*"
 
@@ -64,3 +64,9 @@ server:
 logging:
   level:
     root: INFO
+    com:
+      netflix: DEBUG
+    org:
+      springframework:
+        cloud:
+          netflix: DEBUG

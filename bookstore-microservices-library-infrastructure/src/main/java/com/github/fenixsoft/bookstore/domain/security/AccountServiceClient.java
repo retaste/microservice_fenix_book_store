@@ -16,7 +16,7 @@ import javax.ws.rs.core.MediaType;
  * @author icyfenix@gmail.com
  * @date 2020/4/18 12:33
  **/
-@FeignClient(name = "account")
+@FeignClient(name = "useraccount")
 public interface AccountServiceClient {
 
     @GET
