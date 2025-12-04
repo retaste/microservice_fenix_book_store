@@ -1,12 +1,12 @@
-DROP TABLE IF EXISTS payment;
-DROP TABLE IF EXISTS wallet;
+/*DROP TABLE IF EXISTS payment;
+DROP TABLE IF EXISTS wallet;*/
 
 CREATE TABLE IF NOT EXISTS wallet
 (
     id         INTEGER UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     money      DECIMAL,
     account_id INTEGER UNSIGNED
-) engine = InnoDB;
+) engine = InnoDB; $$
 
 CREATE TABLE IF NOT EXISTS payment
 (
@@ -17,4 +17,4 @@ CREATE TABLE IF NOT EXISTS payment
     expires      INTEGER          NOT NULL,
     payment_link VARCHAR(300),
     pay_state    VARCHAR(20)
-) engine = InnoDB;
+) engine = InnoDB; $$
