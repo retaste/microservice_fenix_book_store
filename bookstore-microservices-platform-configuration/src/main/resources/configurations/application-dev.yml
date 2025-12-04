@@ -2,11 +2,12 @@ database: mysql
 
 spring:
   datasource:
-    url: jdbc:mariadb://192.168.1.88:3306/bookstore
+    url: jdbc:mariadb://192.168.1.88:3306/bookstore?allowMultiQueries=true
     username: allen
     password: Sz@19811211
     driver-class-name: org.mariadb.jdbc.Driver
     initialization-mode: always
+    separator: $$
   jpa:
     show-sql: true
     hibernate:

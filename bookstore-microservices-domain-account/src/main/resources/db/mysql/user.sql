@@ -4,4 +4,6 @@ ALTER DATABASE bookstore
   DEFAULT CHARACTER SET utf8
   DEFAULT COLLATE utf8_general_ci;
 
-GRANT ALL PRIVILEGES ON bookstore.* TO 'bookstore@%' IDENTIFIED BY 'bookstore';
+/*GRANT ALL PRIVILEGES ON bookstore.* TO 'bookstore@%' IDENTIFIED BY 'Sz@19811211';*/
+
+
