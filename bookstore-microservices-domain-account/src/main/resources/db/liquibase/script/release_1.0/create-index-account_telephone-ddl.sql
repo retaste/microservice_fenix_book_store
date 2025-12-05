@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX account_telephone ON account (telephone);

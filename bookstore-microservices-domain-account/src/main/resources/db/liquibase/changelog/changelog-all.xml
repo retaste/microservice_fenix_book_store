@@ -1,0 +1,16 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <!-- Include the changelog for development environment -->
+    <include file="classpath:db/liquibase/script/release_1.0/changelog-release_1.0.xml" context="dev"/>
+<!--
+    &lt;!&ndash; Include the changelog for production environment &ndash;&gt;
+    <include file="db.changelog-prod.xml" context="production" />
+
+    &lt;!&ndash; Include the changelog for test environment &ndash;&gt;
+    <include file="db.changelog-test.xml" context="test" />-->
+
+</databaseChangeLog>

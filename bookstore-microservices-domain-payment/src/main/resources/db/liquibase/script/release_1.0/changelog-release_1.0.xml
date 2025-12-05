@@ -1,0 +1,19 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="payment_1" author="allenshen" >
+        <sqlFile path="create-table-wallet-ddl.sql" relativeToChangelogFile="true"/>
+        <comment>create-table-wallet-ddl.sql</comment>
+    </changeSet>
+    <changeSet id="payment_2" author="allenshen" >
+        <sqlFile path="create-table-payment-ddl.sql" relativeToChangelogFile="true"/>
+        <comment>create-table-payment-ddl.sql</comment>
+    </changeSet>
+    <changeSet id="payment_3" author="allenshen" >
+        <sqlFile path="insert-default-wallet-dml.sql" relativeToChangelogFile="true"/>
+        <comment>insert-default-wallet-dml.sql</comment>
+    </changeSet>
+</databaseChangeLog>

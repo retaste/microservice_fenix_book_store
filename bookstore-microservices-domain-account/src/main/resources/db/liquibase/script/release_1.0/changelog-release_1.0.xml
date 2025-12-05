@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+<changeSet id="useraccount_1" author="allenshen">
+        <sqlFile path="create-table-account-ddl.sql" relativeToChangelogFile="true"/>
+    <comment>create-table-wallet-ddl.sql</comment>
+    </changeSet>
+    <changeSet id="useraccount_2" author="allenshen" >
+        <sqlFile path="create-index-account_user-ddl.sql" relativeToChangelogFile="true"/>
+        <comment>create-index-account_user-ddl.sql</comment>
+    </changeSet>
+    <changeSet id="useraccount_3" author="allenshen" >
+        <sqlFile path="create-index-account_email-ddl.sql" relativeToChangelogFile="true"/>
+        <comment>create-table-payment-ddl.sql</comment>
+    </changeSet>
+    <changeSet id="useraccount_4" author="allenshen" >
+        <sqlFile path="create-index-account_telephone-ddl.sql" relativeToChangelogFile="true"/>
+        <comment>create-index-account_telephone-ddl.sql</comment>
+    </changeSet>
+    <changeSet id="useraccount_5" author="allenshen" >
+        <sqlFile path="insert-default-account-dml.sql" relativeToChangelogFile="true"/>
+        <comment>insert-default-wallet-dml.sql</comment>
+    </changeSet>
+    <changeSet id="useraccount_6" author="allenshen" runOnChange="true">
+        <sqlFile path="insert-wrong-account-to-be-rollback-dml.sql" relativeToChangelogFile="true"/>
+        <comment>insert-wrong-account-to-be-rollback-dml.sql</comment>
+        <rollback>
+            <delete tableName="account">
+                <where> username='invaliduser'</where>
+            </delete>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>

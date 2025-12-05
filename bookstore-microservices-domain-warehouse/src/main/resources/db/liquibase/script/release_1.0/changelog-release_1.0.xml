@@ -1,0 +1,39 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="warehouse_1" author="allenshen" >
+        <sqlFile path="create-table-product-ddl.sql" relativeToChangelogFile="true"/>
+        <comment>create-table-product-ddl.sql</comment>
+    </changeSet>
+    <changeSet id="warehouse_2" author="allenshen" >
+        <sqlFile path="create-table-stockpile-ddl.sql" relativeToChangelogFile="true"/>
+        <comment>create-table-stockpile-ddl.sql</comment>
+    </changeSet>
+    <changeSet id="warehouse_3" author="allenshen">
+        <sqlFile path="create-table-specification-ddl.sql" relativeToChangelogFile="true"/>
+        <comment>create-table-specification-ddl.sql</comment>
+    </changeSet>
+    <changeSet id="warehouse_4" author="allenshen" >
+        <sqlFile path="create-table-advertisement-ddl.sql" relativeToChangelogFile="true"/>
+        <comment>create-table-advertisement-ddl.sql</comment>
+    </changeSet>
+    <changeSet id="warehouse_5" author="allenshen" >
+        <sqlFile path="insert-default-product-dml.sql" relativeToChangelogFile="true"/>
+        <comment>insert-default-product-dml.sql</comment>
+    </changeSet>
+    <changeSet id="warehouse_6" author="allenshen" >
+        <sqlFile path="insert-default-stockpile-dml.sql" relativeToChangelogFile="true"/>
+        <comment>insert-default-stockpile-dml.sql</comment>
+    </changeSet>
+    <changeSet id="warehouse_7" author="allenshen" >
+        <sqlFile path="insert-default-specification-dml.sql" relativeToChangelogFile="true"/>
+        <comment>insert-default-specification-dml.sql</comment>
+    </changeSet>
+    <changeSet id="warehouse_8" author="allenshen" >
+        <sqlFile path="insert-default-advertisement-dml.sql" relativeToChangelogFile="true"/>
+        <comment>insert-default-advertisement-dml.sql</comment>
+    </changeSet>
+</databaseChangeLog>

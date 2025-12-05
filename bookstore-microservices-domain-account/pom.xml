@@ -28,6 +28,12 @@
             <artifactId>mariadb-java-client</artifactId>
             <version>3.4.2</version> <!-- 使用最新的版本 -->
         </dependency>
+        <!-- Liquibase Dependency -->
+        <dependency>
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-core</artifactId>
+            <version>4.27.0</version>
+        </dependency>
     </dependencies>
 
     <build>

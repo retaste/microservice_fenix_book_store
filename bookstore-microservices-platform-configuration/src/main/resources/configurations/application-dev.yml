@@ -6,7 +6,7 @@ spring:
     username: allen
     password: Sz@19811211
     driver-class-name: org.mariadb.jdbc.Driver
-    initialization-mode: always
+    initialization-mode: never
     separator: $$
   jpa:
     show-sql: true

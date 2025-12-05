@@ -7,8 +7,8 @@ database: hsqldb
 
 spring:
   datasource:
-    schema: "classpath:db/${database}/schema.sql"
-    data: "classpath:db/${database}/data.sql"
+    #schema: "classpath:db/${database}/schema.sql"
+    #data: "classpath:db/${database}/data.sql"
     sql-script-encoding: UTF-8
   jpa:
     show-sql: false
@@ -21,6 +21,11 @@ spring:
       cache: true
     cache:
       period: 86400
+  # Liquibase configuration
+  liquibase:
+    change-log: classpath:db/liquibase/changelog/changelog-all.xml
+    contexts: ${spring.profiles.active}
+    enabled: true
 
 security:
   oauth2:

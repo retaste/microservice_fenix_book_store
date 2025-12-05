@@ -20,6 +20,9 @@ spring:
       cache: true
     cache:
       period: 86400
+  # Liquibase configuration
+  liquibase:
+    enabled: false
 
 logging:
   pattern:
